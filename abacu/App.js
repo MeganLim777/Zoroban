@@ -15,10 +15,18 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { createStackNavigator } from 'react-navigation-stack';
+import AbacuNavigator from './navigation/AbacuStack';
+//import {AppLoading} from 'expo'
 
 const App: () => React$Node = () => {
   return (
-    <Text>hi there</Text>
+    // <SafeAreaView>
+    //   <Text>hii</Text>
+    //   <AbacuNavigator />
+    //   <Text>hii</Text>
+    // </SafeAreaView>
+    <AbacuNavigator />
   );
 };
 
