@@ -4,6 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import MainScreen from '../screens/MainScreen/MainScreen';
 import SetConfigsScreen from '../screens/SetConfigsScreen/SetConfigsScreen';
 import GameScreen from '../screens/GameScreen/GameScreen';
+import HoorayScreen from '../screens/HoorayScreen/HoorayScreen';
 
 //Storing the React component that createStackNavigator creates
 const AbacuStack = createStackNavigator({
@@ -15,6 +16,12 @@ const AbacuStack = createStackNavigator({
   },
   Game: {
     screen: GameScreen
+  },
+  Hooray: {
+    screen: HoorayScreen,
+    navigationOptions: {
+        headerShown: false,
+    }
   }
 });
 
