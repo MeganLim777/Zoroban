@@ -4,6 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import MainScreen from '../screens/MainScreen/MainScreen';
 import SetConfigsScreen from '../screens/SetConfigsScreen/SetConfigsScreen';
 import GameScreen from '../screens/GameScreen/GameScreen';
+import GlobalColors from '../styles/Colors';
 
 //Storing the React component that createStackNavigator creates
 const AbacuStack = createStackNavigator({
@@ -17,6 +18,13 @@ const AbacuStack = createStackNavigator({
     screen: GameScreen,
   }
 
-});
+}, {
+      defaultNavigationOptions: () => ({
+          cardStyle: {
+              backgroundColor: 'transparent',
+          },
+      })
+  }
+);
 
 export default createAppContainer(AbacuStack);

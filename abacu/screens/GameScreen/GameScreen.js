@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, SafeAreaView, Button, Alert, BackHandler} from 'react-native';
+import {View, Text, Button, Alert, BackHandler} from 'react-native';
 import {HeaderBackButton} from 'react-navigation-stack';
 import { withNavigation } from 'react-navigation';
 
@@ -54,7 +54,7 @@ class GameScreen extends Component {
     super(props);
 
     this.state = {
-      gameOver: false
+      gameOver: true
     }
   }
 
@@ -117,9 +117,9 @@ class GameScreen extends Component {
     }
 
     return(
-      <SafeAreaView>
+      <View>
         {pageToDisplay}
-      </SafeAreaView>
+      </View>
     );
   }
 
