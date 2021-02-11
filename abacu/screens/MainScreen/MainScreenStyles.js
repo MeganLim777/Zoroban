@@ -5,6 +5,12 @@ const MainScreenStyles = StyleSheet.create({
       fontFamily: 'Roboto'
     },
 
+    buttonContainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      alignItems: 'center'
+    }
+
 
 });
 export default MainScreenStyles;
