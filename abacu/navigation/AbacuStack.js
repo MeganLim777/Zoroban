@@ -9,7 +9,10 @@ import GlobalColors from '../styles/Colors';
 //Storing the React component that createStackNavigator creates
 const AbacuStack = createStackNavigator({
   Main: {
-    screen: MainScreen
+    screen: MainScreen,
+    navigationOptions: {
+        header: null,
+    }
   },
   SetConfigs: {
     screen: SetConfigsScreen

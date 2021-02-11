@@ -1,13 +1,20 @@
 import {StyleSheet} from 'react-native';
 
 const MainScreenStyles = StyleSheet.create({
-    text: {
-      fontFamily: 'Roboto'
+
+    screen: {
+      flex: 1
+    },
+
+    titleContainer: {
+      flex: 1,
+      flexDirection: 'column',
+      justifyContent: 'flex-end',
+      alignItems: 'center'
     },
 
     buttonContainer: {
-      flexDirection: 'row',
-      justifyContent: 'space-around',
+      flex: 1,
       alignItems: 'center'
     }
 

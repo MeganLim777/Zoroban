@@ -1,14 +1,16 @@
 import React from 'react';
 import {View, Text, Button} from 'react-native';
 import MainScreenStyles from './MainScreenStyles.js';
+import PageTitle from '../../components/PageTitle/PageTitle';
 import AbacuButton from '../../components/AbacuButton/AbacuButton';
 
 const MainScreen = props => {
 
   return(
-    <View>
-      <Text style={MainScreenStyles.text}>This is the Main screen</Text>
-      <Text style={MainScreenStyles.text}>This is the Main screen</Text>
+    <View style={MainScreenStyles.screen}>
+      <View style={MainScreenStyles.titleContainer}>
+        <PageTitle>Abacuz</PageTitle>
+      </View>
       <View style={MainScreenStyles.buttonContainer}>
         <AbacuButton
           title="Play"
