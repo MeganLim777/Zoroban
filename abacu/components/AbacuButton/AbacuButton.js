@@ -15,15 +15,17 @@ const AbacuButton = props => {
       }
       activeOpacity={1}
       underlayColor={GlobalColors.PURPLE}
-      onPress={props.onPress}>
+      onPress={props.onPress}
+    >
+      <View>
+        <Text style={
+            {
+              ...AbacuButtonStyles.buttonText,
+              fontSize: parseInt(props.titleFontSize)
+            }
+        }>{props.title}</Text>
 
-      <Text style={
-          {
-            ...AbacuButtonStyles.buttonText,
-            fontSize: parseInt(props.titleFontSize)
-          }
-      }>{props.title}</Text>
-
+      </View>
     </TouchableHighlight>
 
   );
