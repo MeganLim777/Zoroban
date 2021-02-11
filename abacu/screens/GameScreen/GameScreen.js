@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {View, Text, Button, Alert, BackHandler} from 'react-native';
 import {HeaderBackButton} from 'react-navigation-stack';
 import { withNavigation } from 'react-navigation';
+import HoorayPage from './HoorayPage/HoorayPage';
+import GameScreenStyles from './GameScreenStyles';
 
 //Function that IF the game is NOT over, then it will display
 //an Alert when the user presses the top-left Back button or display the
@@ -107,17 +109,12 @@ class GameScreen extends Component {
       //Change the pageToDisplay variable so that it displays the Hooray page
       //instead.
       pageToDisplay = (
-        <View>
-          <Text>Hooray!!!</Text>
-          <Button
-            title="Go to Main screen"
-            onPress={() => this.props.navigation.navigate('Main')} />
-        </View>
+        <HoorayPage />
       );
     }
 
     return(
-      <View>
+      <View style={GameScreenStyles.screen}>
         {pageToDisplay}
       </View>
     );

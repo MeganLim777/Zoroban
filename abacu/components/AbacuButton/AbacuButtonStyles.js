@@ -8,11 +8,13 @@ const AbacuButtonStyles = StyleSheet.create({
       borderRadius: 10,
       backgroundColor: GlobalColors.DARK_BLUE,
       alignItems: 'center',
-      padding: '3%'
+      padding: '3%',
+      marginTop: '5%'
     },
 
     buttonText: {
-      color: GlobalColors.PLATINUM_WHITE
+      color: GlobalColors.PLATINUM_WHITE,
+      textAlign: 'center'
     }
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import {View, Text} from 'react-native';
 import ConfigsButton from '../../components/ConfigsButton/ConfigsButton';
 import AbacuButton from '../../components/AbacuButton/AbacuButton';
 import SetConfigsScreenStyles from './SetConfigsScreenStyles.js';
@@ -9,7 +9,10 @@ const SetConfigsScreen = props => {
 
   return(
     <View style={SetConfigsScreenStyles.screen}>
-      <PageTitle>Choose your configurations</PageTitle>
+
+      <View style={SetConfigsScreenStyles.titleContainer}>
+        <PageTitle>Choose your configurations</PageTitle>
+      </View>
 
       <View style={SetConfigsScreenStyles.buttonContainer}>
         <ConfigsButton

@@ -7,10 +7,12 @@ const SetConfigsScreenStyles = StyleSheet.create({
     },
 
     buttonContainer: {
-      flex: 4,
-      flexDirection: 'column',
-      justifyContent: 'space-around',
+      flex: 5,
       alignItems: 'center'
+    },
+
+    titleContainer: {
+      flex: 1,
     }
 
 

@@ -7,11 +7,8 @@ const PageTitleStyles = StyleSheet.create({
       fontSize: 30,
       color: GlobalColors.LIGHT_BLUE,
       fontWeight: "bold",
-      textAlign: 'center'
-    },
+      textAlign: 'center',
 
-    titleContainer: {
-      flex: 1
     }
 
 
