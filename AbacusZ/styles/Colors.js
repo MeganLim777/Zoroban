@@ -5,7 +5,9 @@ const colors = {
   LIGHT_BLUE: '#59c3c3',
   PLATINUM_WHITE: '#ebebeb',
   PURPLE: '#52489c',
-  BLACK: '#303030'
+  BLACK: '#303030',
+  RED: '#F45B69',
+  GREEN: '#98CB00'
 }
 
 export default colors;

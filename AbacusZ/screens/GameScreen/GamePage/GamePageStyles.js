@@ -18,7 +18,9 @@ const GamePageStyles = StyleSheet.create({
     answerContainer: {
       flex: 2,
       borderColor: 'orange',
-      borderWidth: 3
+      borderWidth: 3,
+      justifyContent: 'space-around',
+      alignItems: 'center'
     },
 
     abacusContainer: {
@@ -29,6 +31,25 @@ const GamePageStyles = StyleSheet.create({
 
     text: {
       color: GlobalColors.PLATINUM_WHITE
+    },
+
+    textInput: {
+      height: 40,
+      width: '50%',
+      borderColor: GlobalColors.PLATINUM_WHITE,
+      borderWidth: 4,
+      color: GlobalColors.PLATINUM_WHITE,
+      textAlign: 'center'
+    },
+
+    correctAns: {
+      fontSize: 18,
+      color: GlobalColors.GREEN
+    },
+
+    wrongAns: {
+      fontSize: 18,
+      color: GlobalColors.RED
     }
 
 });
