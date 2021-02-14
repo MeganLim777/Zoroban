@@ -9,6 +9,8 @@ const GamePageStyles = StyleSheet.create({
 
     questionContainer: {
       flex: 3,
+      justifyContent: 'flex-end',
+      alignItems: 'center',
       borderColor: 'yellow',
       borderWidth: 3
     },
