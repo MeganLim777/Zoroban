@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, Button, Alert, BackHandler} from 'react-native';
 import { withNavigation } from 'react-navigation';
+import GamePage from './GamePage/GamePage';
 import HoorayPage from './HoorayPage/HoorayPage';
 import GameScreenStyles from './GameScreenStyles';
 import GlobalColors from '../../styles/Colors';
@@ -79,9 +80,7 @@ class GameScreen extends Component {
 
     //By default let the Game page be displayed
     let pageToDisplay = (
-      <View>
-        <Text>This is the Game screen</Text>
-      </View>
+      <GamePage />
 
     );
 
