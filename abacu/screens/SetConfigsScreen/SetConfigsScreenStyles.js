@@ -6,15 +6,18 @@ const SetConfigsScreenStyles = StyleSheet.create({
       flex: 1
     },
 
-    buttonContainer: {
-      flex: 5,
-      alignItems: 'center'
+    titleContainer: {
+      flex: 2,
+      borderColor: 'orange',
+      borderWidth: 3
     },
 
-    titleContainer: {
-      flex: 1,
+    buttonContainer: {
+      flex: 8,
+      alignItems: 'center',
+      borderColor: 'white',
+      borderWidth: 3
     }
-
 
 });
 export default SetConfigsScreenStyles;

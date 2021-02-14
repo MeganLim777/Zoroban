@@ -4,6 +4,7 @@ import {HeaderBackButton} from 'react-navigation-stack';
 import { withNavigation } from 'react-navigation';
 import HoorayPage from './HoorayPage/HoorayPage';
 import GameScreenStyles from './GameScreenStyles';
+import GlobalColors from '../../styles/Colors';
 
 //Function that IF the game is NOT over, then it will display
 //an Alert when the user presses the top-left Back button or display the
@@ -59,21 +60,6 @@ class GameScreen extends Component {
       gameOver: true
     }
   }
-
-  //Call the forfeitConfirmation function when the
-  //top-left Back button is pressed.
-  static navigationOptions = ({navigation}) => {
-    return {
-      headerLeft: () => (
-        <HeaderBackButton
-          onPress={() => {
-            forfeitConfirmation(navigation);
-          }}
-        />
-      )
-    };
-  };
-
 
   //Function to call the forfeitConfirmation function.
   goBack = () => {
