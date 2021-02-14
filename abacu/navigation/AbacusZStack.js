@@ -21,7 +21,7 @@ let customHeader = (
 
 
 //Storing the React component that createStackNavigator creates
-const AbacuStack = createStackNavigator({
+const AbacusZStack = createStackNavigator({
   Main: {
     screen: MainScreen,
     navigationOptions: {
@@ -56,4 +56,4 @@ const AbacuStack = createStackNavigator({
   }
 );
 
-export default createAppContainer(AbacuStack);
+export default createAppContainer(AbacusZStack);

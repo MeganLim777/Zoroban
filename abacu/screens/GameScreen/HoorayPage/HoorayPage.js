@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
 import { withNavigation } from 'react-navigation';
-import AbacuButton from '../../../components/AbacuButton/AbacuButton';
+import AbacusZButton from '../../../components/AbacusZButton/AbacusZButton';
 import HoorayPageStyles from './HoorayPageStyles.js';
 import PageTitle from '../../../components/PageTitle/PageTitle';
 
@@ -16,13 +16,13 @@ class HoorayPage extends Component {
           </View>
 
           <View style={HoorayPageStyles.buttonContainer}>
-            <AbacuButton
+            <AbacusZButton
               title="Play again"
               titleFontSize="20"
               width="55%"
               onPress={() => this.props.navigation.navigate('Main')}/>
 
-            <AbacuButton
+            <AbacusZButton
               title="Play again with different settings"
               titleFontSize="20"
               width="55%"

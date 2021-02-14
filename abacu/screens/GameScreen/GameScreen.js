@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {View, Text, Button, Alert, BackHandler} from 'react-native';
-import {HeaderBackButton} from 'react-navigation-stack';
 import { withNavigation } from 'react-navigation';
 import HoorayPage from './HoorayPage/HoorayPage';
 import GameScreenStyles from './GameScreenStyles';
@@ -57,7 +56,7 @@ class GameScreen extends Component {
     super(props);
 
     this.state = {
-      gameOver: true
+      gameOver: false
     }
   }
 
