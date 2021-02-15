@@ -7,59 +7,16 @@ const GamePageStyles = StyleSheet.create({
       flex: 1
     },
 
-    questionContainer: {
-      flex: 3,
-      justifyContent: 'flex-end',
-      alignItems: 'center',
-      borderColor: 'yellow',
+    qAndAnsContainer: {
+      flex: 5,
+      borderColor: 'red',
       borderWidth: 3
-    },
-
-    answerContainer: {
-      flex: 2,
-      borderColor: 'orange',
-      borderWidth: 3,
-      justifyContent: 'space-around',
-      alignItems: 'center'
     },
 
     abacusContainer: {
       flex: 4,
       borderColor: 'blue',
       borderWidth: 3
-    },
-
-    text: {
-      color: GlobalColors.PLATINUM_WHITE,
-      fontSize: 18
-    },
-
-    textInput: {
-      height: 40,
-      width: '50%',
-      borderColor: GlobalColors.PLATINUM_WHITE,
-      borderWidth: 4,
-      color: GlobalColors.PLATINUM_WHITE,
-      textAlign: 'center'
-    },
-
-    resultsContainer: {
-      width: '60%',
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      borderColor: 'red',
-      borderWidth: 2,
-    },
-
-    correctAns: {
-      fontSize: 18,
-      color: GlobalColors.GREEN
-    },
-
-    wrongAns: {
-      fontSize: 18,
-      color: GlobalColors.RED
     }
 
 });

@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import GlobalColors from '../../../../styles/Colors';
+import GlobalColors from '../../../../../styles/Colors';
 
 const QuestionDisplayerStyles = StyleSheet.create({
 

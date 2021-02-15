@@ -7,12 +7,7 @@ class QuestionDisplayer extends PureComponent {
 
   constructor(props) {
     super(props);
-
   }
-
-  componentDidMount() {
-    console.log("QuestionDisplayer rendered3");
-  };
 
   render() {
 
