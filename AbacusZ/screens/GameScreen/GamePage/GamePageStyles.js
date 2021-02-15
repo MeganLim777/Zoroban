@@ -30,7 +30,8 @@ const GamePageStyles = StyleSheet.create({
     },
 
     text: {
-      color: GlobalColors.PLATINUM_WHITE
+      color: GlobalColors.PLATINUM_WHITE,
+      fontSize: 18
     },
 
     textInput: {
@@ -40,6 +41,15 @@ const GamePageStyles = StyleSheet.create({
       borderWidth: 4,
       color: GlobalColors.PLATINUM_WHITE,
       textAlign: 'center'
+    },
+
+    resultsContainer: {
+      width: '60%',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      borderColor: 'red',
+      borderWidth: 2,
     },
 
     correctAns: {

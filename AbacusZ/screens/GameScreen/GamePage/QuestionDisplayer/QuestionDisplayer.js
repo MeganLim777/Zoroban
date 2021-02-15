@@ -23,10 +23,8 @@ const QuestionDisplayer = props => {
 
   return(
 
-    <View>
-      <View style={QuestionDisplayerStyles.questionContainer}>
-        {allNumbers}
-      </View>
+    <View style={QuestionDisplayerStyles.questionContainer}>
+      {allNumbers}
     </View>
   );
 

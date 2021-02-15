@@ -20,11 +20,12 @@ const GamePage = props => {
   let [answer, setAnswer] = useState(number1 * number2);
   let operation = '\u00D7'; //Multiplication    {'\u00F7'} {'\u002B'} {'\u2212'} {'\u00D7'}
   let [inputAns, setInputAns] = useState("0");
-  let [correctOrWrong, setCorrectOrWrong] = useState(null);
+  let [correctOrWrong, setCorrectOrWrong] = useState(<Text style={GamePageStyles.text}>Enter your answer:</Text>);
 
   //This function will generate a new question
   // - so that means generate all the random numbers and calculate the answer.
   // - And also clear the 'correctOrWrong' message.
+  // - And also clear the inputAns.
   const newQuestion = () => {
     let newNumber1 = generateRandomNumber();
     let newNumber2 = generateRandomNumber();
@@ -34,7 +35,8 @@ const GamePage = props => {
     setNumber2(newNumber2);
     setArrayOfNumbers([newNumber1, newNumber2]);
     setAnswer(newAnswer);
-    setCorrectOrWrong(null);
+    setCorrectOrWrong(<Text style={GamePageStyles.text}>Enter your answer:</Text>);
+    setInputAns("");
   }
 
 
@@ -44,14 +46,37 @@ const GamePage = props => {
     setInputAns(input.replace(/[^.0-9]/g, ''));
   }
 
+  //This function is called when the user wants to give up.
+  //When giving up, tell the user the real answer (in both the textInput and the message),
+  //  and a button should go to next question.
+  const giveUp = () => {
+    setCorrectOrWrong(
+      <View style={GamePageStyles.resultsContainer}>
+        <Text style={GamePageStyles.correctAns}>Ans: {answer}</Text>
+        <Button title="Next question" onPress={newQuestion}/>
+      </View>
+    );
+    setInputAns(answer.toString());
+  }
+
 
   //This function checks the answer and will say whether it is correct or wrong.
   const checkAns = () => {
 
     if (parseInt(inputAns) === answer) {
-      setCorrectOrWrong(<Text style={GamePageStyles.correctAns}>Correct</Text>);
+      setCorrectOrWrong(
+        <View style={GamePageStyles.resultsContainer}>
+          <Text style={GamePageStyles.correctAns}>Correct</Text>
+          <Button title="Next question" onPress={newQuestion}/>
+        </View>
+      );
     } else {
-      setCorrectOrWrong(<Text style={GamePageStyles.wrongAns}>Sorry, try again</Text>);
+      setCorrectOrWrong(
+        <View style={GamePageStyles.resultsContainer}>
+          <Text style={GamePageStyles.wrongAns}>Sorry, try again</Text>
+          <Button title="Give up" onPress={giveUp}/>
+        </View>
+      );
     }
 
   }
@@ -62,18 +87,17 @@ const GamePage = props => {
       <View style={GamePageStyles.questionContainer}>
         <QuestionDisplayer arrayOfNumbers={arrayOfNumbers} operation={operation}/>
         <Text style={GamePageStyles.text}>Answer (multiplication):      {answer}</Text>
-        <Button title="generate random numbers" onPress={newQuestion}/>
       </View>
 
       <View style={GamePageStyles.answerContainer}>
+        {correctOrWrong}
+
         <TextInput
           style={GamePageStyles.textInput}
           value={inputAns}
           keyboardType='number-pad'
           onChangeText={(text)=> onChanged(text)}
           onSubmitEditing={checkAns}/>
-
-        {correctOrWrong}
       </View>
 
       <View style={GamePageStyles.abacusContainer}>
