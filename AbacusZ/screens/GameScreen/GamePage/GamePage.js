@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, Text, Button, TextInput} from 'react-native';
 // import AbacusZButton from '../../../components/AbacusZButton/AbacusZButton';
 import GamePageStyles from './GamePageStyles.js';
@@ -80,6 +80,10 @@ const GamePage = props => {
     }
 
   }
+
+  useEffect(() => {
+    console.log("GamePage rendered");
+  });
 
   return(
     <View style={GamePageStyles.screen}>
