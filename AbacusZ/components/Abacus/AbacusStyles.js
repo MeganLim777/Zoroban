@@ -7,14 +7,25 @@ const AbacusStyles = StyleSheet.create({
       flex: 1,
       borderColor: 'white',
       borderWidth: 3,
-      padding: '1%'
+      padding: '1%',
+      width: '100%'
     },
 
     topRack: {
+      flex: 1,
       width: '100%',
-      height: '20%',
       borderBottomColor: GlobalColors.ABACUS_WHITE,
-      borderBottomWidth: 3
+      borderBottomWidth: 3,
+      flexDirection: 'row',
+      justifyContent: 'space-between'
+    },
+
+    bottomRack: {
+      flex: 3,
+      width: '100%',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'stretch'
     }
 
 

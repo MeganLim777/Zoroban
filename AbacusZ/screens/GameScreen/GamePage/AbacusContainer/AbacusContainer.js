@@ -9,7 +9,8 @@ class AbacusContainer extends Component {
     super(props);
 
     this.state = {
-      showAbacus: false
+      showAbacus: false,
+      widthAbacusContainer: 0,
     }
   }
 
@@ -30,19 +31,30 @@ class AbacusContainer extends Component {
   }
 
 
+  //This function gets the width of the abacusContainer (which is the
+  // parent container to the abacus)
+  onContainerLayout = (event) => {
+    const { width } = event.nativeEvent.layout;
+    this.setState({
+      widthAbacusContainer: width
+    })
+  }
+
+
   render() {
 
+    //By default, show the abacus
     let abacus = (
-      <Abacus />
+      <Abacus parentWidth={parseInt(this.state.widthAbacusContainer)}/>
     );
 
-    //If don't want to show abacus
+    //If don't want to show abacus, then the 'abacus' varaible is null.
     if (!this.state.showAbacus) {
       abacus = (null);
     }
 
     return(
-      <View style={AbacusContainerStyles.container}>
+      <View style={AbacusContainerStyles.container} onLayout={this.onContainerLayout}>
 
         <Button title="I want abacus" onPress={this.toggleAbacus}/>
 

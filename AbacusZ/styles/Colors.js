@@ -8,7 +8,8 @@ const colors = {
   BLACK: '#303030',
   RED: '#F45B69',
   GREEN: '#98CB00',
-  ABACUS_WHITE: '#EAE9E9'
+  ABACUS_WHITE: '#EAE9E9',
+  ABACUS_BROWN: '#996515'
 }
 
 export default colors;
