@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
 import {View, Text, Button, TextInput} from 'react-native';
 // import AbacusZButton from '../../../components/AbacusZButton/AbacusZButton';
 import GamePageStyles from './GamePageStyles.js';
 import QuestionAndAnswer from './QuestionAndAnswer/QuestionAndAnswer';
+import AbacusContainer from './AbacusContainer/AbacusContainer';
 
 const GamePage = props => {
 
@@ -14,7 +15,7 @@ const GamePage = props => {
       </View>
 
       <View style={GamePageStyles.abacusContainer}>
-        <Text>This is where abacus goes</Text>
+        <AbacusContainer />
       </View>
     </View>
   );

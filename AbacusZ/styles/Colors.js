@@ -7,7 +7,8 @@ const colors = {
   PURPLE: '#52489c',
   BLACK: '#303030',
   RED: '#F45B69',
-  GREEN: '#98CB00'
+  GREEN: '#98CB00',
+  ABACUS_WHITE: '#EAE9E9'
 }
 
 export default colors;
