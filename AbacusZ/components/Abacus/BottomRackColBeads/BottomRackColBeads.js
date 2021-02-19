@@ -11,7 +11,7 @@ const BottomRackColBeads = props => {
   // });
 
   return(
-    <View style={{justifyContent: 'flex-end'}}>
+    <View style={{justifyContent: 'flex-end', borderColor: 'yellow', borderWidth: 1}}>
       <Bead />
       <Bead />
       <Bead />

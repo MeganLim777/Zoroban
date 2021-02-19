@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text} from 'react-native';
 import AbacusStyles from './AbacusStyles';
+import TopRackBead from './TopRackBead/TopRackBead';
 import BottomRackColBeads from './BottomRackColBeads/BottomRackColBeads';
 import Bead from './Bead/Bead';
 import GlobalConstants from '../../constants/Constants';
@@ -12,7 +13,7 @@ const makingTopBeads = (lastIndex) => {
   var allBeads = [];
 
   for (var i = 0; i < lastIndex; i++) {
-    allBeads.push(<Bead key={i} />);
+    allBeads.push(<TopRackBead key={i} />);
   }
 
   return allBeads;
