@@ -1,5 +1,5 @@
-import React, {Component, useRef, useState} from 'react';
-import {View, Text, TouchableWithoutFeedback, Animated, PanResponder} from 'react-native';
+import React, {Component, useRef, useState, useEffect} from 'react';
+import {View, Text, Animated} from 'react-native';
 import Bead from '../Bead/Bead';
 import GlobalConstants from '../../../constants/Constants';
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
@@ -82,6 +82,10 @@ const TopRackBead = () => {
 
     setSwipeDownYValue(heightInt - GlobalConstants.BEAD_HEIGHT - 7);
   }
+
+  useEffect(() => {
+    console.log("TopRackBead rendered");
+  });
 
 
   return(
