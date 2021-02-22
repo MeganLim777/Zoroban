@@ -15,7 +15,7 @@ const AbacusStyles = StyleSheet.create({
       flex: 1,
       width: '100%',
       borderBottomColor: GlobalColors.ABACUS_WHITE,
-      borderBottomWidth: 3,
+      borderBottomWidth: 5,
       flexDirection: 'row',
       justifyContent: 'space-between'
     },

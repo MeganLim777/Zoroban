@@ -8,8 +8,8 @@ import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 // the abacus.
 const BottomRackColBeads = props => {
 
-  const [containerHeight, setContainerHeight] = useState(GlobalConstants.BEAD_HEIGHT);
-  const [swipeUpYValue, setSwipeUpYValue] = useState(0);
+  const containerHeight = 7 * GlobalConstants.BEAD_HEIGHT;
+  const swipeUpYValue = -(containerHeight - (4 * GlobalConstants.BEAD_HEIGHT) - 13);
   const swipeDownYValue = 0;
 
   //1st top bead
@@ -260,29 +260,12 @@ const BottomRackColBeads = props => {
   }
 
 
-
-  //This function saves the height of the beads' surrounding container
-  // and also get the y-coordinate that the bead should swipe down to.
-  const onContainerLayout = (event) => {
-
-    const { height } = event.nativeEvent.layout;
-    const heightInt = parseInt(height);
-
-    setContainerHeight(heightInt);
-
-    console.log("BottomRackColBeads contianer: ", heightInt);
-
-    //Calculating and saving the amount that the bead needs to move.
-    const beadSwipeAmountMod = heightInt - (4 * GlobalConstants.BEAD_HEIGHT) - 13;
-    setSwipeUpYValue(-(beadSwipeAmountMod));
-  }
-
   useEffect(() => {
     console.log("BottomRackColBeads WAS CALLED!!!!")
   });
 
   return(
-    <View style={{justifyContent: 'flex-end', borderColor: 'yellow', borderWidth: 1}} onLayout={onContainerLayout}>
+    <View style={{height: containerHeight, justifyContent: 'flex-end', borderColor: 'yellow', borderWidth: 1}}>
       <GestureRecognizer
         onSwipeDown={(state) => on1stSwipeDown(state)}
         onSwipeUp={(state) => on1stSwipeUp(state)}>

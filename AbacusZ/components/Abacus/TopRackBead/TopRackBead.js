@@ -7,9 +7,9 @@ import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 //This is the component for a SINGLE bead in the top rack of the abacus.
 const TopRackBead = () => {
 
-  const [containerHeight, setContainerHeight] = useState(GlobalConstants.BEAD_HEIGHT);
-  const [swipeDownYValue, setSwipeDownYValue] = useState(0);
-  const [swipeUpYValue, setSwipeUpYValue] = useState(0);
+  const containerHeight = (2 * GlobalConstants.BEAD_HEIGHT) + 9;
+  const swipeDownYValue = containerHeight - GlobalConstants.BEAD_HEIGHT - 5;
+  const swipeUpYValue = 0;
 
   //State 1 = bead is up, State 0 = bead is down
   const [currentState, setCurrentState] = useState(1);
@@ -72,24 +72,13 @@ const TopRackBead = () => {
   }
 
 
-  //This function saves the height of the bead's surrounding container
-  // and also get the y-coordinate that the bead should swipe down to.
-  const onContainerLayout = (event) => {
-    const { height } = event.nativeEvent.layout;
-    const heightInt = parseInt(height);
-
-    setContainerHeight(heightInt);
-
-    setSwipeDownYValue(heightInt - GlobalConstants.BEAD_HEIGHT - 7);
-  }
-
   useEffect(() => {
     console.log("TopRackBead rendered");
   });
 
 
   return(
-    <View style={{borderColor: 'blue', borderWidth: 1}} onLayout={onContainerLayout}>
+    <View style={{height: containerHeight, borderColor: 'blue', borderWidth: 1}}>
         <GestureRecognizer
           onSwipeDown={(state) => onSwipeDown(state)}
           onSwipeUp={(state) => onSwipeUp(state)}>
