@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, Button, Animated, KeyboardAvoidingView} from 'react-native';
+import {View, Text, Button, Animated, KeyboardAvoidingView, TouchableOpacity} from 'react-native';
 import AbacusContainerStyles from './AbacusContainerStyles.js';
 import Abacus from '../../../../components/Abacus/Abacus';
 
@@ -11,20 +11,24 @@ class AbacusContainer extends Component {
     this.state = {
       showAbacus: false,
       widthAbacusContainer: 0,
+      toggleAbacusBtnText: "Open Abacus"
     }
   }
 
-  //This function toggles the abacus to display and not display.
+  //This function toggles the abacus to display and not display,
+  //and also change the toggle abacus button.
   toggleAbacus = () => {
 
     if (this.state.showAbacus) {
       this.setState({
-        showAbacus: false
+        showAbacus: false,
+        toggleAbacusBtnText: "Open Abacus"
       });
 
     } else {
       this.setState({
-        showAbacus: true
+        showAbacus: true,
+        toggleAbacusBtnText: "Close Abacus"
       });
     }
 
@@ -38,6 +42,10 @@ class AbacusContainer extends Component {
     this.setState({
       widthAbacusContainer: width
     })
+  }
+
+  componentDidMount() {
+    console.log("AbacusContainer rendered");
   }
 
 
@@ -56,7 +64,9 @@ class AbacusContainer extends Component {
     return(
       <KeyboardAvoidingView enabled={false} style={AbacusContainerStyles.container} onLayout={this.onContainerLayout}>
 
-        <Button title="I want abacus" onPress={this.toggleAbacus}/>
+        <TouchableOpacity style={AbacusContainerStyles.toggleAbacusBtn} onPress={this.toggleAbacus}>
+          <Text style={AbacusContainerStyles.toggleAbacusBtnText}>{this.state.toggleAbacusBtnText}</Text>
+        </TouchableOpacity>
 
         {abacus}
 

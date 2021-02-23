@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, Button, TextInput} from 'react-native';
+import {View, Text, Button, TextInput, TouchableOpacity} from 'react-native';
 import InputAndResultsStyles from './InputAndResultsStyles.js';
 import GlobalColors from '../../../../../styles/Colors';
 
@@ -30,7 +30,10 @@ const InputAndResults = props => {
     setCorrectOrWrong(
       <View style={InputAndResultsStyles.resultsContainer}>
         <Text style={InputAndResultsStyles.correctAns}>Ans: {props.answer}</Text>
-        <Button title="Next question" onPress={newQuestion}/>
+
+        <TouchableOpacity onPress={newQuestion}>
+          <Text style={InputAndResultsStyles.resultBtnText}>Next question >></Text>
+        </TouchableOpacity>
       </View>
     );
 
@@ -73,7 +76,10 @@ const InputAndResults = props => {
       setCorrectOrWrong(
         <View style={InputAndResultsStyles.resultsContainer}>
           <Text style={InputAndResultsStyles.correctAns}>Correct</Text>
-          <Button title="Next question" onPress={newQuestion}/>
+
+          <TouchableOpacity onPress={newQuestion}>
+            <Text style={InputAndResultsStyles.resultBtnText}>Next question >></Text>
+          </TouchableOpacity>
         </View>
       );
 
@@ -84,7 +90,10 @@ const InputAndResults = props => {
       setCorrectOrWrong(
         <View style={InputAndResultsStyles.resultsContainer}>
           <Text style={InputAndResultsStyles.wrongAns}>Sorry, try again</Text>
-          <Button title="Give up" onPress={giveUp}/>
+
+          <TouchableOpacity onPress={giveUp}>
+            <Text style={InputAndResultsStyles.resultBtnText}>Give up >></Text>
+          </TouchableOpacity>
         </View>
       );
     }

@@ -7,7 +7,18 @@ const AbacusContainerStyles = StyleSheet.create({
       flex: 1,
       borderColor: 'red',
       borderWidth: 3,
-      padding: '1%'
+      padding: '1%',
+      alignItems: 'center'
+    },
+
+    toggleAbacusBtn: {
+      borderColor: 'white',
+      borderWidth: 3,
+      alignItems: 'center'
+    },
+
+    toggleAbacusBtnText: {
+      color: GlobalColors.LIGHT_BLUE
     }
 
 })

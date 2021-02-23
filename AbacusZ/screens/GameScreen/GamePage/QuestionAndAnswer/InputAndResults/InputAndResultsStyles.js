@@ -17,7 +17,8 @@ const InputAndResultsStyles = StyleSheet.create({
       width: '60%',
       borderWidth: 4,
       color: GlobalColors.PLATINUM_WHITE,
-      textAlign: 'center'
+      textAlign: 'center',
+      fontSize: 15
     },
 
     text: {
@@ -39,6 +40,11 @@ const InputAndResultsStyles = StyleSheet.create({
       alignItems: 'center',
       borderColor: 'red',
       borderWidth: 2
+    },
+
+    resultBtnText: {
+      color: GlobalColors.PLATINUM_WHITE,
+      fontSize: 15
     },
 
     correctAns: {
