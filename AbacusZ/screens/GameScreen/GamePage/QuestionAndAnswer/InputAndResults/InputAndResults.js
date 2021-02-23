@@ -18,7 +18,7 @@ const InputAndResults = props => {
   // This function ensures that we only accept inputs that
   // contains numbers 0 - 9 and decimal points.
   const onChanged = (input) => {
-    setInputAns(input.replace(/[^.0-9]/g, ''));
+    setInputAns(input.replace(/[^-.0-9]/g, ''));
   }
 
 
