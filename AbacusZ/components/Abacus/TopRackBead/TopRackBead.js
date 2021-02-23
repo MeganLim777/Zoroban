@@ -20,13 +20,10 @@ const TopRackBead = () => {
 
   //This function will be called when the bead is swipped down.
   const onSwipeDown = (gestureState) => {
-    console.log("You swiped down");
 
     //If the bead is currently up, move it down,
     //then set the state to be 0 (down).
     if (currentState === 1) {
-      console.log("currentState: ", currentState);
-      console.log("You can move down");
 
       //Move the bead down in 0.3 secs.
       Animated.timing(moveY, {
@@ -37,9 +34,6 @@ const TopRackBead = () => {
 
       setCurrentState(0);
 
-    } else {
-      console.log("currentState: ", currentState);
-      console.log("You CANNOT move down");
     }
 
   }
@@ -47,13 +41,10 @@ const TopRackBead = () => {
 
   //This function will be called when the bead is swipped up.
   const onSwipeUp = (gestureState) => {
-    console.log("You swiped up");
 
     //If the bead is currently down, move it up,
     //then set the state to be 1 (up).
     if (currentState === 0) {
-      console.log("currentState: ", currentState);
-      console.log("You can move up");
 
       //Move the bead up in 0.3 secs.
       Animated.timing(moveY, {
@@ -64,17 +55,9 @@ const TopRackBead = () => {
 
       setCurrentState(1);
 
-    } else {
-      console.log("currentState: ", currentState);
-      console.log("You CANNOT move up");
     }
 
   }
-
-
-  useEffect(() => {
-    console.log("TopRackBead rendered");
-  });
 
 
   return(

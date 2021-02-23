@@ -15,9 +15,7 @@ const makingTopBeads = (lastIndex) => {
   for (var i = 0; i < lastIndex; i++) {
     allBeads.push(<TopRackBead key={i} />);
   }
-
-  console.log("hey");
-
+  
   return allBeads;
 }
 

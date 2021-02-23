@@ -44,10 +44,6 @@ class AbacusContainer extends Component {
     })
   }
 
-  componentDidMount() {
-    console.log("AbacusContainer rendered");
-  }
-
 
   render() {
 
