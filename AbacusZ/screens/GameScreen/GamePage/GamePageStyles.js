@@ -8,15 +8,11 @@ const GamePageStyles = StyleSheet.create({
     },
 
     qAndAnsContainer: {
-      flex: 5,
-      borderColor: 'red',
-      borderWidth: 3
+      flex: 5
     },
 
     abacusContainer: {
-      flex: 4,
-      borderColor: 'blue',
-      borderWidth: 3
+      flex: 4
     }
 
 });

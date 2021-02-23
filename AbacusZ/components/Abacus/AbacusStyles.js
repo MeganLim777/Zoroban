@@ -5,8 +5,6 @@ const AbacusStyles = StyleSheet.create({
 
     container: {
       flex: 1,
-      borderColor: 'white',
-      borderWidth: 3,
       padding: '1%',
       width: '100%'
     },
@@ -17,15 +15,15 @@ const AbacusStyles = StyleSheet.create({
       borderBottomColor: GlobalColors.ABACUS_WHITE,
       borderBottomWidth: 5,
       flexDirection: 'row',
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
+      alignItems: 'flex-end'
     },
 
     bottomRack: {
       flex: 3,
       width: '100%',
       flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'stretch'
+      justifyContent: 'space-between'
     }
 
 

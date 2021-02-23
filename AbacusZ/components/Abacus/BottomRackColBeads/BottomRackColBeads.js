@@ -9,7 +9,7 @@ import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 const BottomRackColBeads = props => {
 
   const containerHeight = 7 * GlobalConstants.BEAD_HEIGHT;
-  const swipeUpYValue = -(containerHeight - (4 * GlobalConstants.BEAD_HEIGHT) - 13);
+  const swipeUpYValue = -(containerHeight - (4 * GlobalConstants.BEAD_HEIGHT) - 12);
   const swipeDownYValue = 0;
 
   //1st top bead
@@ -265,7 +265,7 @@ const BottomRackColBeads = props => {
   });
 
   return(
-    <View style={{height: containerHeight, justifyContent: 'flex-end', borderColor: 'yellow', borderWidth: 1}}>
+    <View style={{height: containerHeight, justifyContent: 'flex-end'}}>
       <GestureRecognizer
         onSwipeDown={(state) => on1stSwipeDown(state)}
         onSwipeUp={(state) => on1stSwipeUp(state)}>

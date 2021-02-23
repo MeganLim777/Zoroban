@@ -78,7 +78,7 @@ const TopRackBead = () => {
 
 
   return(
-    <View style={{height: containerHeight, borderColor: 'blue', borderWidth: 1}}>
+    <View style={{height: containerHeight}}>
         <GestureRecognizer
           onSwipeDown={(state) => onSwipeDown(state)}
           onSwipeUp={(state) => onSwipeUp(state)}>

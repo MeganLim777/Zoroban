@@ -14,9 +14,7 @@ const QuestionDisplayerStyles = StyleSheet.create({
     },
 
     questionContainer: {
-      alignItems: 'flex-end',
-      borderColor: 'green',
-      borderWidth: 2
+      alignItems: 'flex-end'
     }
 
 });

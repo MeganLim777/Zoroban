@@ -5,8 +5,6 @@ const InputAndResultsStyles = StyleSheet.create({
 
     componentContainer: {
       flex: 1,
-      borderColor: 'green',
-      borderWidth: 3,
       justifyContent: 'space-around',
       alignItems: 'center',
       width: '100%'
@@ -28,8 +26,6 @@ const InputAndResultsStyles = StyleSheet.create({
 
     enterAnsMessageContainer: {
       width: '60%',
-      borderColor: 'red',
-      borderWidth: 2,
       alignItems: 'center'
     },
 
@@ -37,9 +33,7 @@ const InputAndResultsStyles = StyleSheet.create({
       width: '60%',
       flexDirection: 'row',
       justifyContent: 'space-between',
-      alignItems: 'center',
-      borderColor: 'red',
-      borderWidth: 2
+      alignItems: 'center'
     },
 
     resultBtnText: {

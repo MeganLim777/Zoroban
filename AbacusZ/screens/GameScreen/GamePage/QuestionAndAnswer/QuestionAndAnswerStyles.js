@@ -10,15 +10,11 @@ const QuestionAndAnswerStyles = StyleSheet.create({
     questionContainer: {
       flex: 3,
       justifyContent: 'flex-end',
-      alignItems: 'center',
-      borderColor: 'yellow',
-      borderWidth: 3
+      alignItems: 'center'
     },
 
     ansAndResultContainer: {
       flex: 2,
-      borderColor: 'blue',
-      borderWidth: 3,
       alignItems: 'center'
     },
 
