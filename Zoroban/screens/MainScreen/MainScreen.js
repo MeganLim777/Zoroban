@@ -2,17 +2,17 @@ import React from 'react';
 import {View, Text, Button} from 'react-native';
 import MainScreenStyles from './MainScreenStyles.js';
 import PageTitle from '../../components/PageTitle/PageTitle';
-import AbacusZButton from '../../components/AbacusZButton/AbacusZButton';
+import ZorobanButton from '../../components/ZorobanButton/ZorobanButton';
 
 const MainScreen = props => {
 
   return(
     <View style={MainScreenStyles.screen}>
       <View style={MainScreenStyles.titleContainer}>
-        <PageTitle>AbacusZ</PageTitle>
+        <PageTitle>Zoroban</PageTitle>
       </View>
       <View style={MainScreenStyles.buttonContainer}>
-        <AbacusZButton
+        <ZorobanButton
           title="Play"
           titleFontSize="25"
           width="35%"

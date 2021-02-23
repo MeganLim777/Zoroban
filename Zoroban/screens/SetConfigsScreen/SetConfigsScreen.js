@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Button} from 'react-native';
 import ConfigsButton from '../../components/ConfigsButton/ConfigsButton';
-import AbacusZButton from '../../components/AbacusZButton/AbacusZButton';
+import ZorobanButton from '../../components/ZorobanButton/ZorobanButton';
 import SetConfigsScreenStyles from './SetConfigsScreenStyles.js';
 import PageTitle from '../../components/PageTitle/PageTitle';
 
@@ -31,7 +31,7 @@ const SetConfigsScreen = props => {
           width="55%"
           onPress={() => props.navigation.navigate('Game')}/>
 
-        <AbacusZButton
+        <ZorobanButton
           title="Custom"
           titleFontSize="20"
           width="55%"

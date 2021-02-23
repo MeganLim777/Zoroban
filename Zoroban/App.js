@@ -1,14 +1,14 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
-import AbacusZNavigator from './navigation/AbacusZStack';
+import ZorobanNavigator from './navigation/ZorobanStack';
 import GlobalColors from './styles/Colors';
-//import {AppLoading} from 'expo'
+
 
 const App: () => React$Node = () => {
   return (
     <SafeAreaView style={styles.screen}>
-      <AbacusZNavigator/>
+      <ZorobanNavigator/>
     </SafeAreaView>
   );
 };

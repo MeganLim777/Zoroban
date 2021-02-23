@@ -1,7 +1,6 @@
 import React from 'react';
 import {createAppContainer} from 'react-navigation';
 import { createStackNavigator, HeaderBackButton } from 'react-navigation-stack';
-// import BackButton from '../components/Header/Header';
 import MainScreen from '../screens/MainScreen/MainScreen';
 import SetConfigsScreen from '../screens/SetConfigsScreen/SetConfigsScreen';
 import GameScreen from '../screens/GameScreen/GameScreen';
@@ -21,7 +20,7 @@ let customHeader = (
 
 
 //Storing the React component that createStackNavigator creates
-const AbacusZStack = createStackNavigator({
+const ZorobanStack = createStackNavigator({
   Main: {
     screen: MainScreen,
     navigationOptions: {
@@ -56,4 +55,4 @@ const AbacusZStack = createStackNavigator({
   }
 );
 
-export default createAppContainer(AbacusZStack);
+export default createAppContainer(ZorobanStack);

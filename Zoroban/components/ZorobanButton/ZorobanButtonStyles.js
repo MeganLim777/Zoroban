@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import GlobalColors from '../../styles/Colors';
 
-const AbacusZButtonStyles = StyleSheet.create({
+const ZorobanButtonStyles = StyleSheet.create({
     button: {
       borderWidth: 3,
       borderColor: GlobalColors.PLATINUM_WHITE,
@@ -19,4 +19,4 @@ const AbacusZButtonStyles = StyleSheet.create({
 
 
 });
-export default AbacusZButtonStyles;
+export default ZorobanButtonStyles;

@@ -1,15 +1,15 @@
 import React from 'react';
 import {View, Text, TouchableHighlight} from 'react-native';
-import AbacusZButtonStyles from './AbacusZButtonStyles.js';
+import ZorobanButtonStyles from './ZorobanButtonStyles.js';
 import GlobalColors from '../../styles/Colors';
 
-const AbacusZButton = props => {
+const ZorobanButton = props => {
 
   return(
     <TouchableHighlight
       style={
         {
-          ...AbacusZButtonStyles.button,
+          ...ZorobanButtonStyles.button,
           width: props.width
         }
       }
@@ -20,7 +20,7 @@ const AbacusZButton = props => {
       <View>
         <Text style={
             {
-              ...AbacusZButtonStyles.buttonText,
+              ...ZorobanButtonStyles.buttonText,
               fontSize: parseInt(props.titleFontSize)
             }
         }>{props.title}</Text>
@@ -32,4 +32,4 @@ const AbacusZButton = props => {
 
 }
 
-export default AbacusZButton;
+export default ZorobanButton;
