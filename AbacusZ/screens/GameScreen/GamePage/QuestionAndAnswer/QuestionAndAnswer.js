@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, Button, TextInput} from 'react-native';
+import {View, Text, Button, TextInput, KeyboardAvoidingView} from 'react-native';
 // import AbacusZButton from '../../../components/AbacusZButton/AbacusZButton';
 import QuestionAndAnswerStyles from './QuestionAndAnswerStyles.js';
 import QuestionDisplayer from './QuestionDisplayer/QuestionDisplayer';

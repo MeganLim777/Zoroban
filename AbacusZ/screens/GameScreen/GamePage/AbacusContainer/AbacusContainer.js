@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, Button, Animated} from 'react-native';
+import {View, Text, Button, Animated, KeyboardAvoidingView} from 'react-native';
 import AbacusContainerStyles from './AbacusContainerStyles.js';
 import Abacus from '../../../../components/Abacus/Abacus';
 
@@ -54,13 +54,13 @@ class AbacusContainer extends Component {
     }
 
     return(
-      <View style={AbacusContainerStyles.container} onLayout={this.onContainerLayout}>
+      <KeyboardAvoidingView enabled={false} style={AbacusContainerStyles.container} onLayout={this.onContainerLayout}>
 
         <Button title="I want abacus" onPress={this.toggleAbacus}/>
 
         {abacus}
 
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 
