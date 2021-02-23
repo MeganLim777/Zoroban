@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "abacu-tvOS.app"
-               BlueprintName = "abacu-tvOS"
-               ReferencedContainer = "container:abacu.xcodeproj">
+               BuildableName = "Zoroban-tvOS.app"
+               BlueprintName = "Zoroban-tvOS"
+               ReferencedContainer = "container:Zoroban.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "abacu-tvOSTests.xctest"
-               BlueprintName = "abacu-tvOSTests"
-               ReferencedContainer = "container:abacu.xcodeproj">
+               BuildableName = "Zoroban-tvOSTests.xctest"
+               BlueprintName = "Zoroban-tvOSTests"
+               ReferencedContainer = "container:Zoroban.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "abacu-tvOS.app"
-            BlueprintName = "abacu-tvOS"
-            ReferencedContainer = "container:abacu.xcodeproj">
+            BuildableName = "Zoroban-tvOS.app"
+            BlueprintName = "Zoroban-tvOS"
+            ReferencedContainer = "container:Zoroban.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "abacu-tvOS.app"
-            BlueprintName = "abacu-tvOS"
-            ReferencedContainer = "container:abacu.xcodeproj">
+            BuildableName = "Zoroban-tvOS.app"
+            BlueprintName = "Zoroban-tvOS"
+            ReferencedContainer = "container:Zoroban.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
