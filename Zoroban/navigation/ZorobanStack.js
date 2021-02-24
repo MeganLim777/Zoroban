@@ -49,7 +49,7 @@ const ZorobanStack = createStackNavigator({
 }, {
       defaultNavigationOptions: () => ({
           cardStyle: {
-              backgroundColor: 'transparent',
+              backgroundColor: GlobalColors.BLACK
           },
       })
   }
