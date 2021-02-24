@@ -3,6 +3,14 @@ import {View, Text, Button, TextInput, TouchableOpacity} from 'react-native';
 import InputAndResultsStyles from './InputAndResultsStyles.js';
 import GlobalColors from '../../../../../styles/Colors';
 
+
+//This function rounds the number/decimal nicely as expected.
+// precision = the decimal place that you want to round to.
+function round(value, precision) {
+    var multiplier = Math.pow(10, precision || 0);
+    return Math.round(value * multiplier) / multiplier;
+}
+
 const InputAndResults = props => {
 
   let [inputAns, setInputAns] = useState("");
@@ -27,9 +35,12 @@ const InputAndResults = props => {
   //  and the textInput will be disabled
   //  and a button should go to next question.
   const giveUp = () => {
+
+    let realAns = props.answer;
+
     setCorrectOrWrong(
       <View style={InputAndResultsStyles.resultsContainer}>
-        <Text style={InputAndResultsStyles.correctAns}>Ans: {props.answer}</Text>
+        <Text style={InputAndResultsStyles.correctAns}>Ans: {realAns}</Text>
 
         <TouchableOpacity onPress={newQuestion}>
           <Text style={InputAndResultsStyles.resultBtnText}>Next question >></Text>
@@ -39,7 +50,7 @@ const InputAndResults = props => {
 
     //Tell user the real answer in the textInput,
     // disable the textInput and change the textInput border colour to green.
-    setInputAns(props.answer.toString());
+    setInputAns(realAns.toString());
     setCanType(false);
     setTextInputColor(GlobalColors.GREEN);
   }
@@ -71,7 +82,13 @@ const InputAndResults = props => {
   //  If wrong, then say 'Sorry, try again' message and show 'Give up' button.
   const checkAns = () => {
 
-    if (parseInt(inputAns) === props.answer) {
+    let realAns = props.answer;
+
+    //For the addition, subtraction and multiplication operations,
+    //    if the inputAns is not an integer, then make it an integer when comparing with real answer.
+    //For the division operation, both inputAns and realAns should be
+    //    exactly the same strings. (We also can round the user's answer to 4dp just in case).
+    if ((parseInt(inputAns) === realAns) || (inputAns === realAns) || ( (round(parseFloat(inputAns), 4)).toString() === realAns) ) {
 
       setCorrectOrWrong(
         <View style={InputAndResultsStyles.resultsContainer}>

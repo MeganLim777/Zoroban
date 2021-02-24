@@ -5,6 +5,12 @@ import QuestionDisplayer from './QuestionDisplayer/QuestionDisplayer';
 import InputAndResults from './InputAndResults/InputAndResults';
 import Constants from '../../../../constants/Constants';
 
+//This function rounds the number/decimal nicely as expected.
+// precision = the decimal place that you want to round to.
+function round(value, precision) {
+    var multiplier = Math.pow(10, precision || 0);
+    return Math.round(value * multiplier) / multiplier;
+}
 
 //This function returns an array of random numbers based on the
 //given array's length and stored values.
@@ -87,9 +93,31 @@ function calculateAns(operation, arrayOfNumbers) {
 
     return result;
 
+  } else if (operation === Constants.OPERATION.DIVISION) {
+    console.log("hey it is DIVISION");
+    let result = arrayOfNumbers[0]; //First element
+
+    //Starting from the first number,
+    //subsequently divide the numbers after that.
+    for (var i = 1; i < amountOfNumbers; i++) {
+      result = round(result / arrayOfNumbers[i], 4); //Round to 4dp each time.
+    }
+
+    //Convert to string so that we can compare string to string when checking answer.
+    //If both strings are the same, then the answer will be correct.
+    return result.toString();
+
   } else {
-    console.log("hey it is DIVISION, don't have answer yet");
-    return (0);
+    //The given operation is bad... so we'll let the user do addition.
+
+    let result = 0;
+
+    //Add all the numbers of the array up
+    for (var i = 0; i < amountOfNumbers; i++) {
+      result = result + arrayOfNumbers[i];
+    }
+
+    return result;
   }
 
 }

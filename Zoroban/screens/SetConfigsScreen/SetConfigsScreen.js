@@ -39,7 +39,7 @@ const SetConfigsScreen = props => {
           width="55%"
           onPress={() => props.navigation.navigate('Game',
             {
-              operation: Constants.OPERATION.MULTIPLICATION,
+              operation: Constants.OPERATION.DIVISION,
               digitsNLevels: [3, 2, 2],
               numOfQuestions: 10
             }
