@@ -80,7 +80,7 @@ class GameScreen extends Component {
 
     //By default let the Game page be displayed
     let pageToDisplay = (
-      <GamePage />
+      <GamePage {...this.props.navigation.state.params}/>
 
     );
 

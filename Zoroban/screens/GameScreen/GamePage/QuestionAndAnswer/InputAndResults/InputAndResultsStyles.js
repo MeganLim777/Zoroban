@@ -26,13 +26,15 @@ const InputAndResultsStyles = StyleSheet.create({
 
     enterAnsMessageContainer: {
       width: '60%',
+      height: '60%',
+      justifyContent: 'center',
       alignItems: 'center'
     },
 
     resultsContainer: {
       width: '60%',
-      flexDirection: 'row',
-      justifyContent: 'space-between',
+      height: '60%',
+      justifyContent: 'space-around',
       alignItems: 'center'
     },
 

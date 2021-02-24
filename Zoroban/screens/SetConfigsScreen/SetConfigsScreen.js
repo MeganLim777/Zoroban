@@ -4,6 +4,8 @@ import ConfigsButton from '../../components/ConfigsButton/ConfigsButton';
 import ZorobanButton from '../../components/ZorobanButton/ZorobanButton';
 import SetConfigsScreenStyles from './SetConfigsScreenStyles.js';
 import PageTitle from '../../components/PageTitle/PageTitle';
+import Constants from '../../constants/Constants';
+
 
 const SetConfigsScreen = props => {
 
@@ -21,7 +23,13 @@ const SetConfigsScreen = props => {
           levelsInfo="(3 levels)"
           numQuestions="(20 questions)"
           width="55%"
-          onPress={() => props.navigation.navigate('Game')}/>
+          onPress={() => props.navigation.navigate('Game',
+            {
+              operation: Constants.OPERATION.ADDITION,
+              digitsNLevels: [2, 2, 2],
+              numOfQuestions: 20
+            }
+        )}/>
 
         <ConfigsButton
           operationType="Subtraction"
@@ -29,7 +37,13 @@ const SetConfigsScreen = props => {
           levelsInfo="(3 levels)"
           numQuestions="(10 questions)"
           width="55%"
-          onPress={() => props.navigation.navigate('Game')}/>
+          onPress={() => props.navigation.navigate('Game',
+            {
+              operation: Constants.OPERATION.MULTIPLICATION,
+              digitsNLevels: [3, 2, 2],
+              numOfQuestions: 10
+            }
+        )}/>
 
         <ZorobanButton
           title="Custom"

@@ -10,7 +10,7 @@ const GamePage = props => {
     <View style={GamePageStyles.screen}>
 
       <View style={GamePageStyles.qAndAnsContainer}>
-        <QuestionAndAnswer />
+        <QuestionAndAnswer {...props}/>
       </View>
 
       <View style={GamePageStyles.abacusContainer}>
