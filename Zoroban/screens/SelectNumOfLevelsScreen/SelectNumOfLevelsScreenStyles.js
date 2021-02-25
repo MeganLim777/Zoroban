@@ -13,12 +13,11 @@ const SetConfigsScreenStyles = StyleSheet.create({
       justifyContent: 'center'
     },
 
-    buttonContainer: {
+    bodyContainer: {
       flex: 8,
       alignItems: 'center',
       borderColor: 'white',
       borderWidth: 3
     }
-
 });
 export default SetConfigsScreenStyles;

@@ -49,7 +49,7 @@ const SetConfigsScreen = props => {
           title="Custom"
           titleFontSize="20"
           width="55%"
-          onPress={() => props.navigation.navigate('Game')}/>
+          onPress={() => props.navigation.navigate('SelectOperation')}/>
       </View>
 
     </View>
