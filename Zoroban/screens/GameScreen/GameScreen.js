@@ -66,6 +66,13 @@ class GameScreen extends Component {
     return forfeitConfirmation(this.props.navigation, this.state.gameOver);
   }
 
+  //Function to call when game is over
+  gameOverMethod = () => {
+    this.setState({
+      gameOver: true
+    });
+  }
+
   //Adding the event listener for Android's hardware Back button.
   componentDidMount() {
     BackHandler.addEventListener('hardwareBackPress', this.goBack);
@@ -80,7 +87,7 @@ class GameScreen extends Component {
 
     //By default let the Game page be displayed
     let pageToDisplay = (
-      <GamePage {...this.props.navigation.state.params}/>
+      <GamePage {...this.props.navigation.state.params} gameOverMethod={this.gameOverMethod}/>
 
     );
 

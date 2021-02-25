@@ -143,12 +143,14 @@ class QuestionAndAnswer extends Component {
 
     console.log("!!!!!!!!");
 
+    //Minimum amount of questions that can be done is 1.
     this.state = {
       chosenOperation: chosenOperation,
       digitsNLevels: digitsNLevels,
       numOfQuestions: numOfQuestions,
       arrayOfNumbers: arrayOfNumbers,
-      answer: calculateAns(chosenOperation, arrayOfNumbers)
+      answer: calculateAns(chosenOperation, arrayOfNumbers),
+      numOfQuestionsDone: 1
     };
 
   }
@@ -157,19 +159,41 @@ class QuestionAndAnswer extends Component {
   // - so that means generate all the random numbers and calculate the answer.
   newQuestion = () => {
 
-    console.log("newQUestion is called");
-    let newArrayOfNums = generateRandomNumbers(this.state.digitsNLevels);
-    let newAnswer = calculateAns(this.state.chosenOperation, newArrayOfNums);
+    let questionNum = this.state.numOfQuestionsDone;
+    let totalNumOfQuestions = this.state.numOfQuestions;
 
-    this.setState({
-      arrayOfNumbers: newArrayOfNums,
-      answer: newAnswer
-    });
+    //If we have NOT completed all the questions yet, give a new question.
+    if (questionNum < totalNumOfQuestions) {
+      console.log("newQUestion is called");
+      let newArrayOfNums = generateRandomNumbers(this.state.digitsNLevels);
+      let newAnswer = calculateAns(this.state.chosenOperation, newArrayOfNums);
+
+      this.setState({
+        arrayOfNumbers: newArrayOfNums,
+        answer: newAnswer,
+        numOfQuestionsDone: questionNum + 1
+      });
+    } else { //We have completed all the questions, then it is game over.
+      console.log("Game over");
+      this.props.gameOverMethod();
+    }
 
 
   }
 
+
+  componentDidMount() {
+    console.log("QuestionAndAnswer rendered!!!!!!!!!!!!!!!!!!");
+  }
+
   render() {
+
+    let questionNum = this.state.numOfQuestionsDone;
+    let totalNumOfQuestions = this.state.numOfQuestions;
+
+    console.log("Question ", questionNum, "------------------");
+    console.log("out of ", totalNumOfQuestions, "------------------");
+
     return(
       <View style={QuestionAndAnswerStyles.container}>
 

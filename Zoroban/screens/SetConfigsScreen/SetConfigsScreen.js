@@ -27,7 +27,7 @@ const SetConfigsScreen = props => {
             {
               operation: Constants.OPERATION.ADDITION,
               digitsNLevels: [2, 2, 2],
-              numOfQuestions: 20
+              numOfQuestions: 5
             }
         )}/>
 
