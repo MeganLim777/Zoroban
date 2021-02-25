@@ -197,6 +197,10 @@ class QuestionAndAnswer extends Component {
     return(
       <View style={QuestionAndAnswerStyles.container}>
 
+        <View style={QuestionAndAnswerStyles.questionNumContainer}>
+          <Text style={QuestionAndAnswerStyles.questionNumText}>Question {this.state.numOfQuestionsDone} of {this.state.numOfQuestions}</Text>
+        </View>
+
         <View style={QuestionAndAnswerStyles.questionContainer}>
           <QuestionDisplayer arrayOfNumbers={this.state.arrayOfNumbers} operation={this.state.chosenOperation}/>
           <Text style={QuestionAndAnswerStyles.text}>Answer:      {this.state.answer}</Text>

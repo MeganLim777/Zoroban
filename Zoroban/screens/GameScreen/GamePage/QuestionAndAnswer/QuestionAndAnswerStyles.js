@@ -7,14 +7,25 @@ const QuestionAndAnswerStyles = StyleSheet.create({
       flex: 1
     },
 
+    questionNumContainer: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
+
+    questionNumText: {
+      color: GlobalColors.LIGHT_BLUE,
+      fontSize: 25
+    },
+
     questionContainer: {
-      flex: 3,
+      flex: 6,
       justifyContent: 'flex-end',
       alignItems: 'center'
     },
 
     ansAndResultContainer: {
-      flex: 2,
+      flex: 5,
       alignItems: 'center'
     },
 
