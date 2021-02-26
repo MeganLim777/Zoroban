@@ -9,7 +9,8 @@ const colors = {
   RED: '#F45B69',
   GREEN: '#98CB00',
   ABACUS_WHITE: '#EAE9E9',
-  ABACUS_BROWN: '#996515'
+  ABACUS_BROWN: '#996515',
+  GREY: '#616161'
 }
 
 export default colors;
