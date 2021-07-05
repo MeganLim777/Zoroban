@@ -60,11 +60,11 @@ class AbacusContainer extends Component {
     return(
       <KeyboardAvoidingView enabled={false} style={AbacusContainerStyles.container} onLayout={this.onContainerLayout}>
 
+        {abacus}
+
         <TouchableOpacity style={AbacusContainerStyles.toggleAbacusBtn} onPress={this.toggleAbacus}>
           <Text style={AbacusContainerStyles.toggleAbacusBtnText}>{this.state.toggleAbacusBtnText}</Text>
         </TouchableOpacity>
-
-        {abacus}
 
       </KeyboardAvoidingView>
     );
