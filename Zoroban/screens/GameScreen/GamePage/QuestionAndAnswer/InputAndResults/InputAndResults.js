@@ -43,7 +43,7 @@ const InputAndResults = props => {
         <Text style={InputAndResultsStyles.correctAns}>Ans: {realAns}</Text>
 
         <TouchableOpacity onPress={newQuestion}>
-          <Text style={InputAndResultsStyles.resultBtnText}>Next question >></Text>
+          <Text style={InputAndResultsStyles.resultBtnText}>Next question -></Text>
         </TouchableOpacity>
       </View>
     );
@@ -95,7 +95,7 @@ const InputAndResults = props => {
           <Text style={InputAndResultsStyles.correctAns}>Correct</Text>
 
           <TouchableOpacity onPress={newQuestion}>
-            <Text style={InputAndResultsStyles.resultBtnText}>Next question >></Text>
+            <Text style={InputAndResultsStyles.resultBtnText}>Next question -></Text>
           </TouchableOpacity>
         </View>
       );

@@ -40,7 +40,8 @@ const InputAndResultsStyles = StyleSheet.create({
 
     resultBtnText: {
       color: GlobalColors.PLATINUM_WHITE,
-      fontSize: 15
+      fontSize: 15,
+      fontWeight: 'bold'
     },
 
     correctAns: {
