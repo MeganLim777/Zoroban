@@ -3,7 +3,7 @@ import {View, Text, TouchableHighlight} from 'react-native';
 import SelectNumOfLevelsScreenStyles from './SelectNumOfLevelsScreenStyles.js';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import ZorobanButton from '../../components/ZorobanButton/ZorobanButton';
-import QuestionPreviewer from './QuestionPreviewer/QuestionPreviewer';
+import QuestionPreviewerForLevels from './QuestionPreviewerForLevels/QuestionPreviewerForLevels';
 import GlobalColors from '../../styles/Colors.js'
 
 
@@ -105,7 +105,7 @@ const SelectNumOfLevelsScreen = props => {
         </View>
 
         <View style={SelectNumOfLevelsScreenStyles.questionPreview}>
-          <QuestionPreviewer numofLevels={levelAmount} operation={chosenOperation}/>
+          <QuestionPreviewerForLevels numofLevels={levelAmount} operation={chosenOperation}/>
         </View>
 
         <View style={SelectNumOfLevelsScreenStyles.nextBtnContainer}>

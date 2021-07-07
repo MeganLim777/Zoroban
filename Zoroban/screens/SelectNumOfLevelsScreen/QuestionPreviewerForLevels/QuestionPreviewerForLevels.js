@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import {View, Text} from 'react-native';
-import QuestionPreviewerStyles from './QuestionPreviewerStyles.js';
+import QuestionPreviewerForLevelsStyles from './QuestionPreviewerForLevelsStyles.js';
 
 //This function returns the array to preview.
 function levelsPreviewCreator(numofLevels) {
@@ -24,7 +24,7 @@ function levelsPreviewCreator(numofLevels) {
   }
 }
 
-class QuestionPreviewer extends PureComponent {
+class QuestionPreviewerForLevels extends PureComponent {
 
   constructor(props) {
     super(props);
@@ -41,11 +41,11 @@ class QuestionPreviewer extends PureComponent {
     const allNumbers = arrayOfNumbers.map((number, index) => {
         if (index !== lastIndex) {
           return (
-            <Text key={index} style={QuestionPreviewerStyles.question}>     {number}</Text>
+            <Text key={index} style={QuestionPreviewerForLevelsStyles.question}>     {number}</Text>
           );
         } else {
           return (
-            <Text key={index} style={QuestionPreviewerStyles.question}>{this.props.operation}   {number}</Text>
+            <Text key={index} style={QuestionPreviewerForLevelsStyles.question}>{this.props.operation}   {number}</Text>
           );
         }
     });
@@ -53,14 +53,14 @@ class QuestionPreviewer extends PureComponent {
     return(
 
       <View>
-        <View style={QuestionPreviewerStyles.questionContainer}>
+        <View style={QuestionPreviewerForLevelsStyles.questionContainer}>
           {allNumbers}
         </View>
-        <Text style={QuestionPreviewerStyles.dummyAnswer}>xxxxx</Text>
+        <Text style={QuestionPreviewerForLevelsStyles.dummyAnswer}>xxxxx</Text>
       </View>
     );
   }
 
 }
 
-export default QuestionPreviewer;
+export default QuestionPreviewerForLevels;

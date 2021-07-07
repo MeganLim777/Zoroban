@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import GlobalColors from '../../../styles/Colors';
 
-const QuestionDisplayerStyles = StyleSheet.create({
+const QuestionDisplayerForLevelsStyles = StyleSheet.create({
 
     question: {
       color: GlobalColors.PLATINUM_WHITE,
@@ -20,4 +20,4 @@ const QuestionDisplayerStyles = StyleSheet.create({
     }
 
 });
-export default QuestionDisplayerStyles;
+export default QuestionDisplayerForLevelsStyles;
