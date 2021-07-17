@@ -1,13 +1,18 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {View, Text} from 'react-native';
 import { withNavigation } from 'react-navigation';
 import ZorobanButton from '../../../components/ZorobanButton/ZorobanButton';
 import HoorayPageStyles from './HoorayPageStyles.js';
 import PageTitle from '../../../components/PageTitle/PageTitle';
 
-class HoorayPage extends Component {
+class HoorayPage extends PureComponent {
+
+  constructor(props) {
+    super(props);
+  }
 
   render() {
+
     return(
       <View style={HoorayPageStyles.screen}>
 
@@ -20,13 +25,13 @@ class HoorayPage extends Component {
               title="Play again"
               titleFontSize="20"
               width="55%"
-              onPress={() => this.props.navigation.navigate('Main')}/>
+              onPress={() => this.props.resetSameGameMethod()}/>
 
             <ZorobanButton
               title="Play again with different settings"
               titleFontSize="20"
               width="55%"
-              onPress={() => this.props.navigation.navigate('Main')}/>
+              onPress={() => this.props.navigation.navigate('SetConfigs')}/>
           </View>
       </View>
     );

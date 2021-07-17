@@ -73,6 +73,15 @@ class GameScreen extends Component {
     });
   }
 
+  //Function to call to reset the game with the same configurations
+  resetSameGame = () => {
+    console.log("I want to play same game.");
+
+    this.setState({
+      gameOver: false
+    });
+  }
+
   //Adding the event listener for Android's hardware Back button.
   componentDidMount() {
     BackHandler.addEventListener('hardwareBackPress', this.goBack);
@@ -100,7 +109,7 @@ class GameScreen extends Component {
       //Change the pageToDisplay variable so that it displays the Hooray page
       //instead.
       pageToDisplay = (
-        <HoorayPage />
+        <HoorayPage resetSameGameMethod={this.resetSameGame}/>
       );
     }
 
