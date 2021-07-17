@@ -76,6 +76,7 @@ const SetConfigsScreenStyles = StyleSheet.create({
 
     nextBtnContainer: {
       flex: 2,
+      width: '70%',
       justifyContent: 'flex-start',
       alignItems: 'flex-start'
     }
