@@ -21,13 +21,13 @@ const SetConfigsScreen = props => {
           operationType="Addition"
           digitsInfo="(2 digits only)"
           levelsInfo="(3 levels)"
-          numQuestions="(20 questions)"
+          numQuestions="(10 questions)"
           width="55%"
           onPress={() => props.navigation.navigate('Game',
             {
               operation: Constants.OPERATION.ADDITION,
               digitsNLevels: [2, 2, 2],
-              numOfQuestions: 5
+              numOfQuestions: 10
             }
         )}/>
 
@@ -39,7 +39,7 @@ const SetConfigsScreen = props => {
           width="55%"
           onPress={() => props.navigation.navigate('Game',
             {
-              operation: Constants.OPERATION.DIVISION,
+              operation: Constants.OPERATION.SUBTRACTION,
               digitsNLevels: [3, 2, 2],
               numOfQuestions: 10
             }
