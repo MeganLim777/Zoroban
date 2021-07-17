@@ -203,7 +203,6 @@ class QuestionAndAnswer extends Component {
 
         <View style={QuestionAndAnswerStyles.questionContainer}>
           <QuestionDisplayer arrayOfNumbers={this.state.arrayOfNumbers} operation={this.state.chosenOperation}/>
-          <Text style={QuestionAndAnswerStyles.text}>Answer:      {this.state.answer}</Text>
         </View>
 
         <View style={QuestionAndAnswerStyles.ansAndResultContainer}>

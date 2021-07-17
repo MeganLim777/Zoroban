@@ -19,13 +19,13 @@ const QuestionAndAnswerStyles = StyleSheet.create({
     },
 
     questionContainer: {
-      flex: 6,
+      flex: 7,
       justifyContent: 'flex-end',
       alignItems: 'center'
     },
 
     ansAndResultContainer: {
-      flex: 5,
+      flex: 4,
       alignItems: 'center'
     },
 
