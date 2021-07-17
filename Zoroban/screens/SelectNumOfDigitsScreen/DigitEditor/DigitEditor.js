@@ -52,10 +52,6 @@ const DigitEditor = props => {
 
   //********************************//
 
-  //This should appear every time digit actually changes
-  useEffect(() => {
-    console.log("DigitEditor got update somewhere");
-  });
 
   //This method is called when the 'increase the amount of digits' button has
   //  been pressed.
@@ -143,7 +139,7 @@ const DigitEditor = props => {
           </View>
       </TouchableHighlight>
 
-      <Text style={[DigitEditorStyles.number, DigitEditorStyles.lastNumber]}>{text}</Text>
+      <Text style={DigitEditorStyles.number}>{text}</Text>
 
       <TouchableHighlight
         style={DigitEditorStyles.button}

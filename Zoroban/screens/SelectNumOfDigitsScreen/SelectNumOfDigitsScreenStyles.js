@@ -9,22 +9,16 @@ const SelectNumOfDigitsScreenStyles = StyleSheet.create({
 
     titleContainer: {
       flex: 2,
-      borderColor: 'orange',
-      borderWidth: 3,
       justifyContent: 'center'
     },
 
     bodyContainer: {
       flex: 8,
-      alignItems: 'center',
-      borderColor: 'white',
-      borderWidth: 3
+      alignItems: 'center'
     },
 
     questionContainer: {
       alignItems: 'center',
-      borderColor: GlobalColors.PLATINUM_WHITE,
-      borderWidth: 3,
       flex: 3,
       width: '80%'
     },

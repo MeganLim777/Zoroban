@@ -8,28 +8,17 @@ const DigitEditorStyles = StyleSheet.create({
       justifyContent: 'flex-end',
       alignItems: 'flex-end',
       width: '90%',
-      marginTop: 5,
-      borderColor: 'yellow',
-      borderWidth: 2
+      marginTop: 5
     },
 
     number: {
       color: GlobalColors.PLATINUM_WHITE,
       fontSize: 25,
-      textAlign: 'center',
-      borderColor: 'green',
-      borderWidth: 2
-    },
-
-    lastNumber: {
-      borderBottomColor: GlobalColors.PLATINUM_WHITE,
-      borderBottomWidth: 2
+      textAlign: 'center'
     },
 
     button: {
       width: '20%',
-      borderColor: 'red',
-      borderWidth: 2,
       marginHorizontal: 15
     },
 

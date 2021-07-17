@@ -24,9 +24,6 @@ const SelectNumOfDigitsScreen = props => {
 
   const [arrayOfDigits, setArrayOfDigits] = useState(arrayOfDigitsIni);
 
-  useEffect(() => {
-    console.log("SelectNumOfDigitsScreen got update somewhere");
-  });
 
   //This should be called every time any increase digit button is pressed AND
   //  the number of digits is actually able to increase.
