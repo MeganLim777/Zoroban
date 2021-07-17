@@ -9,17 +9,13 @@ const SelectNumOfQuestionsScreenStyles = StyleSheet.create({
 
   titleContainer: {
     flex: 2,
-    borderColor: 'orange',
-    borderWidth: 3,
     justifyContent: 'center'
   },
 
   bodyContainer: {
     flex: 8,
     alignItems: 'center',
-    justifyContent: 'space-around',
-    borderColor: 'white',
-    borderWidth: 3
+    justifyContent: 'space-around'
   }
 
 });
