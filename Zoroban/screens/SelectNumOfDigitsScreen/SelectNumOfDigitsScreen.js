@@ -99,7 +99,11 @@ const SelectNumOfDigitsScreen = props => {
             title="Next"
             titleFontSize="20"
             width="100%"
-            onPress={() => props.navigation.navigate('Main')}/>
+            onPress={() => props.navigation.navigate('SelectNumOfQuestions',{
+              operation: operation,
+              numOfLevels: numOfLevels,
+              digitsArray: arrayOfDigits
+            })} />
         </View>
 
       </View>

@@ -6,6 +6,7 @@ import SetConfigsScreen from '../screens/SetConfigsScreen/SetConfigsScreen';
 import SelectOperationScreen from '../screens/SelectOperationScreen/SelectOperationScreen';
 import SelectNumOfLevelsScreen from '../screens/SelectNumOfLevelsScreen/SelectNumOfLevelsScreen';
 import SelectNumOfDigitsScreen from '../screens/SelectNumOfDigitsScreen/SelectNumOfDigitsScreen';
+import SelectNumOfQuestionsScreen from '../screens/SelectNumOfQuestionsScreen/SelectNumOfQuestionsScreen';
 import GameScreen from '../screens/GameScreen/GameScreen';
 import GlobalColors from '../styles/Colors';
 
@@ -68,6 +69,18 @@ const ZorobanStack = createStackNavigator({
   },
   SelectNumOfDigits: {
     screen: SelectNumOfDigitsScreen,
+    navigationOptions: {
+      headerLeft: (props) => (
+        <HeaderBackButton
+          {...props}
+          pressColorAndroid={GlobalColors.PLATINUM_WHITE}
+        />
+      ),
+      ...customHeader
+    }
+  },
+  SelectNumOfQuestions: {
+    screen: SelectNumOfQuestionsScreen,
     navigationOptions: {
       headerLeft: (props) => (
         <HeaderBackButton
