@@ -45,10 +45,6 @@ class AbacusContainer extends Component {
   }
 
 
-  componentDidMount() {
-    console.log("AbacusContainer rendered!!!!!!!!!!!!!!!!!!");
-  }
-
   render() {
 
     //By default, show the abacus

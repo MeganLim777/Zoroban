@@ -21,8 +21,6 @@ function round(value, precision) {
 //         and the second and third numbers should have 3 digits.
 function generateRandomNumbers(digitsNLvlsArray) {
 
-  console.log("generateRandomNumbers is called >>>>>>>>");
-
   const numOfLevels = digitsNLvlsArray.length;
 
   let resultArr = Array.apply(Array(numOfLevels));
@@ -57,10 +55,8 @@ function generateRandomNumbers(digitsNLvlsArray) {
 function calculateAns(operation, arrayOfNumbers) {
 
   const amountOfNumbers = arrayOfNumbers.length;
-  console.log(arrayOfNumbers);
 
   if (operation === Constants.OPERATION.ADDITION) {
-    console.log("hey it is ADDITION");
     let result = 0;
 
     //Add all the numbers of the array up
@@ -71,7 +67,6 @@ function calculateAns(operation, arrayOfNumbers) {
     return result;
 
   } else if (operation === Constants.OPERATION.SUBTRACTION) {
-    console.log("hey it is SUBTRACTION");
     let result = arrayOfNumbers[0]; //First element
 
     //Starting from the first number,
@@ -83,7 +78,6 @@ function calculateAns(operation, arrayOfNumbers) {
     return result;
 
   } else if (operation === Constants.OPERATION.MULTIPLICATION) {
-    console.log("hey it is MULTIPLICATION");
     let result = 1;
 
     //Multiply all the numbers of the array together.
@@ -94,7 +88,6 @@ function calculateAns(operation, arrayOfNumbers) {
     return result;
 
   } else if (operation === Constants.OPERATION.DIVISION) {
-    console.log("hey it is DIVISION");
     let result = arrayOfNumbers[0]; //First element
 
     //Starting from the first number,
@@ -130,7 +123,6 @@ class QuestionAndAnswer extends Component {
 
     //Getting the params
     const {operation, digitsNLevels, numOfQuestions} = props;
-    console.log("operation: ", operation);
 
 
     //Getting the chosen operation into a string form.
@@ -140,8 +132,6 @@ class QuestionAndAnswer extends Component {
     //Generating an array of random numbers based on the
     //given amount of digits and levels.
     let arrayOfNumbers = generateRandomNumbers(digitsNLevels);
-
-    console.log("!!!!!!!!");
 
     //Minimum amount of questions that can be done is 1.
     this.state = {
@@ -164,7 +154,6 @@ class QuestionAndAnswer extends Component {
 
     //If we have NOT completed all the questions yet, give a new question.
     if (questionNum < totalNumOfQuestions) {
-      console.log("newQUestion is called");
       let newArrayOfNums = generateRandomNumbers(this.state.digitsNLevels);
       let newAnswer = calculateAns(this.state.chosenOperation, newArrayOfNums);
 
@@ -174,7 +163,6 @@ class QuestionAndAnswer extends Component {
         numOfQuestionsDone: questionNum + 1
       });
     } else { //We have completed all the questions, then it is game over.
-      console.log("Game over");
       this.props.gameOverMethod();
     }
 
@@ -182,17 +170,10 @@ class QuestionAndAnswer extends Component {
   }
 
 
-  componentDidMount() {
-    console.log("QuestionAndAnswer rendered!!!!!!!!!!!!!!!!!!");
-  }
-
   render() {
 
     let questionNum = this.state.numOfQuestionsDone;
     let totalNumOfQuestions = this.state.numOfQuestions;
-
-    console.log("Question ", questionNum, "------------------");
-    console.log("out of ", totalNumOfQuestions, "------------------");
 
     return(
       <View style={QuestionAndAnswerStyles.container}>

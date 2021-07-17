@@ -75,11 +75,15 @@ class GameScreen extends Component {
 
   //Function to call to reset the game with the same configurations
   resetSameGame = () => {
-    console.log("I want to play same game.");
 
     this.setState({
       gameOver: false
     });
+  }
+
+  //Adding the event listener for Android's hardware Back button.
+  componentDidUpdate() {
+    BackHandler.addEventListener('hardwareBackPress', this.goBack);
   }
 
   //Adding the event listener for Android's hardware Back button.
