@@ -9,16 +9,12 @@ const SetConfigsScreenStyles = StyleSheet.create({
 
     titleContainer: {
       flex: 2,
-      borderColor: 'orange',
-      borderWidth: 3,
       justifyContent: 'center'
     },
 
     bodyContainer: {
       flex: 8,
-      alignItems: 'center',
-      borderColor: 'white',
-      borderWidth: 3
+      alignItems: 'center'
     },
 
     levelsEditorContainer: {
@@ -26,18 +22,14 @@ const SetConfigsScreenStyles = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'space-around',
       alignItems: 'center',
-      width: '70%',
-      borderColor: 'green',
-      borderWidth: 3
+      width: '70%'
     },
 
     levelsEditor: {
       flex: 1,
       justifyContent: 'space-around',
       alignItems: 'center',
-      height: '100%',
-      borderColor: 'yellow',
-      borderWidth: 3
+      height: '100%'
     },
 
     button: {
@@ -68,32 +60,24 @@ const SetConfigsScreenStyles = StyleSheet.create({
       height: '30%',
       fontSize: 25,
       color: GlobalColors.PLATINUM_WHITE,
-      textAlign: 'center',
-      borderColor: 'red',
-      borderWidth: 3
+      textAlign: 'center'
     },
 
     levelsEditorLabel: {
       flex: 1,
       fontSize: 25,
       color: GlobalColors.PLATINUM_WHITE,
-      textAlign: 'center',
-      borderColor: 'red',
-      borderWidth: 3
+      textAlignVertical: 'center'
     },
 
     questionPreview: {
-      flex: 4,
-      borderColor: 'orange',
-      borderWidth: 3
+      flex: 4
     },
 
     nextBtnContainer: {
       flex: 2,
       justifyContent: 'flex-start',
-      alignItems: 'flex-start',
-      borderColor: 'blue',
-      borderWidth: 3
+      alignItems: 'flex-start'
     }
 });
 export default SetConfigsScreenStyles;
